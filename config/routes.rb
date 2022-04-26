@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-
-  get '/users/index'
-
-  get '/users/:id', to: 'users#show'
   
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show]
+  end
 
   root  'users#index'
 end
