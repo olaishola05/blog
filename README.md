@@ -59,6 +59,12 @@ $ cd blog
 - rails s
 ```
 
+### Run Test
+  
+  ```bash
+  - rspec spec/
+  ```
+
 ## Author
 
 👤 **Ola Ishola**
