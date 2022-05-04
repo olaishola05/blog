@@ -22,9 +22,15 @@ body{
 .user{
     display: flex;
     gap: 20px;
+    padding: 10px;
 }
 
-.user, img, .user-details{
+.image-container{
+    width: 10%;
+    height: 10%;
+}
+
+.users .user-details{
     flex: 1;
     border: 1px solid black;
 }
