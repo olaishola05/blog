@@ -1,5 +1,4 @@
 class Like < ApplicationRecord
-
   belongs_to :user
   belongs_to :post
 
@@ -9,5 +8,4 @@ class Like < ApplicationRecord
     counts ||= 0
     post.update(likes_counter: counts + 1)
   end
-
 end
