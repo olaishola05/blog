@@ -1,0 +1,30 @@
+body{
+    background-color: whitesmoke;
+}
+
+.app-container{
+    width: 90%;
+    border: 1px solid yellow;
+    padding: 30px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.users-container{
+    width: 90%;
+}
+
+.user-container{
+    border: 1px solid red;
+    margin-bottom: 15px;
+}
+
+.user{
+    display: flex;
+    gap: 20px;
+}
+
+.user, img, .user-details{
+    flex: 1;
+    border: 1px solid black;
+}
