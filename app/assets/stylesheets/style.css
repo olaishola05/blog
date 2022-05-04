@@ -3,34 +3,56 @@ body{
 }
 
 .app-container{
-    width: 90%;
-    border: 1px solid yellow;
+    width: 70%;
     padding: 30px;
     display: flex;
     margin: 0 auto;
 }
 
 .users-container{
-    width: 90%;
+    width: 95%;
+   margin: 0 auto;
 }
 
 .user-container{
-    border: 1px solid red;
     margin-bottom: 15px;
 }
 
 .user{
+    width: 100%;
     display: flex;
     gap: 20px;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .image-container{
-    width: 10%;
-    height: 10%;
+    width: 12%;
+    height: 5%;
+    border-radius: 5px;
 }
 
-.users .user-details{
-    flex: 1;
-    border: 1px solid black;
+.image-container img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.user-details{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    height: 155px;
+    padding: 0 20px;
+}
+
+.user-details h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.user-details p{
+    margin-top: 100px;
+    font-size: 18px;
+    font-weight: normal;
 }
