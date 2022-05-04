@@ -56,3 +56,29 @@ body{
     font-size: 18px;
     font-weight: normal;
 }
+
+.single-user .single-user-info{
+    width: 79.5%;
+    border: 2px solid black;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.single-user-info h3{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.single-user-info p{
+    font-size: 15.5px;
+}
+
+.counters{
+    float: right;
+}
+
+.counters span{
+    font-size: 13px;
+}
