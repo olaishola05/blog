@@ -1,11 +1,7 @@
-<div>
+<div class='post-container'>
 <%= render @user %>
-<div class="">
     <% @posts.each_with_index do |post, index| %>
-    <div class=''>
         <%= render 'posts', post: post, index: index %>
-    </div>
     <% end %>
-</div>
-
+    <button type='button' class='pagination'>Pagination</button>
 </div>
