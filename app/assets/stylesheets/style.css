@@ -37,7 +37,7 @@ body{
 }
 
 .user-details{
-    width: 60%;
+    width: 68%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,12 +57,34 @@ body{
     font-weight: normal;
 }
 
+.show-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .single-user .single-user-info{
     width: 79.5%;
     border: 2px solid black;
     padding: 5px 5px;
+    margin: 0 auto;
     margin-bottom: 10px;
     height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-user .user-info{
+    align-self: center;
+    margin-left: 67px;
+    margin-bottom: 10px;
+}
+
+.recent{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .single-user-info h3{
@@ -76,9 +98,22 @@ body{
 }
 
 .counters{
-    float: right;
+    align-self: flex-end;
 }
 
 .counters span{
     font-size: 13px;
+}
+
+.all-post-btn{
+    width: 100px;
+    padding: 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 2px solid black;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.comment-sect{
+    border: 1px solid red;
 }

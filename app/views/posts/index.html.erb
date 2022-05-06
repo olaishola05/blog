@@ -1,7 +1,11 @@
-<div class="users-container">
-    <% @posts.each do |post| %>
-    <div class='user-container'>
-        <%= render post %>
+<div>
+<%= render @user %>
+<div class="">
+    <% @posts.each_with_index do |post, index| %>
+    <div class=''>
+        <%= render 'posts', post: post, index: index %>
     </div>
     <% end %>
+</div>
+
 </div>

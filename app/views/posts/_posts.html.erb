@@ -1,7 +1,17 @@
+<div class='user-info'>
 <div class='single-user-info'>
     <h3>Post #<%= index + 1 %></h3>
     <p><%= post.text%>...</p>
     <div class='counters'>
     <span>Comments: <%= post.comments_counter ||= 'No comments yet' %></span>,
     <span>Likes: <%= post.likes_counter ||= 0 %></div></span>
+
+    <% post.comments.each do |comment|%>
+        <div class='comment-sect'>
+            <%= render comment %>
+        </div>
+    <% end %>
 </div>
+
+</div>
+
