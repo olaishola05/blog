@@ -1,14 +1,14 @@
 <div class='show-container'>
-<div class='single-user'>
-    <div class='user-info'><%= render @user %></div>
-    <div class='single-user-info'>
-    <h3>Bio</h3>
-    <p><%= @user.bio %></p>
+    <div class='single-user'>
+        <div class='user-info'><%= render @user %></div>
+        <div class='single-user-info'>
+            <h3>Bio</h3>
+            <p><%= @user.bio %></p>
+        </div>
+        <h3 class='recent'>Recent Posts</h3>
+        <% @user.recent_posts.each_with_index do |post, index| %>
+            <%= render post, index: index %>
+        <% end %>
     </div>
-    <h3 class='recent'>Recent Posts</h3>
-    <% @user.recent_posts.each_with_index do |post, index| %>
-        <%= render post, index: index %>
-    <% end %>
-</div>
-<button type='button' class='all-post-btn'>See all posts</button>
+    <button type='button' class='all-post-btn'>See all posts</button>
 </div>

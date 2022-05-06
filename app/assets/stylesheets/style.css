@@ -86,13 +86,13 @@ img{
     font-weight: bold;
 }
 
-.single-user-info, .single-user-posts h3{
+.single-user-info, .single-user-posts, .single-post h3{
     margin-bottom: 10px;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.single-user-info, .single-user-posts p{
+.single-user-info, .single-user-posts, .single-post p{
     font-size: 15.5px;
 }
 
@@ -147,4 +147,34 @@ img{
     border: 2px solid black;
     padding: 5px 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+}
+
+.single-post{
+    /* width: 85.5%; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.single-post .post-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-counts{
+    margin-top: 0;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.post-comment{
+    width: 98.5%;
+    margin-left: 0;
 }

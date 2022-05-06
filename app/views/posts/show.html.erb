@@ -1,1 +1,19 @@
-<%= @post.id %>
+<div class='post'>
+    <div class='single-post'>
+        <div class='post-header'>
+            <h3>Post #<%= @post.id %> by <%= @post.user.name %></h3>
+            <div class='counters post-counts'>
+                <span>Comments: <%= @post.comments.size ||= 'No comments yet' %></span>,
+                <span>Likes: <%= @post.likes.size ||= 0 %></span>
+            </div>
+        </div>
+        <p><%= @post.text%>...</p>
+
+    </div>
+        <div class='comment-sect post-comment'></div>
+            <% @post.comments.each do |comment|%>
+                <%= render comment %>
+            <% end %>
+        </div>
+
+</div>

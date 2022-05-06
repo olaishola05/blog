@@ -1,15 +1,16 @@
 <div class='single-user'>
-<div class='single-user-posts'>
-    <h3>Post #<%= index + 1 %></h3>
-    <p><%= post.text%>...</p>
-    <div class='counters'>
-    <span>Comments: <%= post.comments.size ||= 'No comments yet' %></span>,
-    <span>Likes: <%= post.likes.size ||= 0 %></div></span>
-</div>
+    <div class='single-user-posts'>
+        <h3>Post #<%= index + 1 %></h3>
+        <p><%= post.text%>...</p>
+        <div class='counters'>
+            <span>Comments: <%= post.comments.size ||= 'No comments yet' %></span>,
+            <span>Likes: <%= post.likes.size ||= 0 %></span>
+        </div>
+    </div>
     <div class='comment-sect'>
-    <% post.comments.each do |comment|%>
-        <%= render comment %>
-    <% end %>
+        <% post.comments.each do |comment|%>
+            <%= render comment %>
+        <% end %>
     </div>
 
 </div>
