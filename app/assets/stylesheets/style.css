@@ -29,11 +29,11 @@ body{
     width: 12%;
     height: 5%;
     border-radius: 5px;
+    object-fit: contain;
 }
 
-.image-container img{
-    width: 100%;
-    object-fit: contain;
+img{
+    width: 400px;
 }
 
 .user-details{
@@ -68,7 +68,6 @@ body{
     padding: 5px 5px;
     margin: 0 auto;
     margin-bottom: 10px;
-    height: 60px;
     display: flex;
     flex-direction: column;
 }

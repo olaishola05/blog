@@ -2,24 +2,24 @@
 
 users = [{
     :name => "James",
-    :photo => "https://randomuser.me/api/portraits/men/87.jpg",
+    :photo => "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
     :bio => "Biology"
   },{
     :name => "Samantha",
-    :photo => "https://randomuser.me/api/portraits/women/60.jpg",
+    :photo => "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
     :bio => "Fashion Designer"
   },{
     :name => "Jane",
-    :photo => "https://randomuser.me/api/portraits/women/30.jpg",
+    :photo => "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
     :bio => "News Reporter"
   },{
     :name => "Spencer",
-    :photo => "https://randomuser.me/api/portraits/men/30.jpg",
+    :photo => "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
     :bio => "Soccer Player"
   },
   {
     :name => "Lilly",
-    :photo => "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
+    :photo => "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
     :bio => "Teacher from Poland.",
   },
 
@@ -31,7 +31,7 @@ users = [{
 
   {
     :name => "Mike",
-    :photo => "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+    :photo => "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
     :bio => "Teacher from Zimbabwe",
   }
 ]

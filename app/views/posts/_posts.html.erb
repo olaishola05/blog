@@ -3,8 +3,8 @@
     <h3>Post #<%= index + 1 %></h3>
     <p><%= post.text%>...</p>
     <div class='counters'>
-    <span>Comments: <%= post.comments_counter ||= 'No comments yet' %></span>,
-    <span>Likes: <%= post.likes_counter ||= 0 %></div></span>
+    <span>Comments: <%= post.comments.size ||= 'No comments yet' %></span>,
+    <span>Likes: <%= post.likes.size ||= 0 %></div></span>
 
     <% post.comments.each do |comment|%>
         <div class='comment-sect'>
