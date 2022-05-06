@@ -2,7 +2,6 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
-
   def comment_counters
     post_comments = Post.find(post_id).comments_counter
     post_comments ||= 0

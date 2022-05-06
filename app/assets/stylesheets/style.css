@@ -1,180 +1,181 @@
-body{
-    background-color: whitesmoke;
+body {
+  background-color: whitesmoke;
 }
 
-.app-container{
-    width: 70%;
-    padding: 30px;
-    display: flex;
-    margin: 0 auto;
+.app-container {
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  margin: 0 auto;
 }
 
-.users-container{
-    width: 95%;
-   margin: 0 auto;
+.users-container {
+  width: 95%;
+  margin: 0 auto;
 }
 
-.user-container{
-    margin-bottom: 15px;
+.user-container {
+  margin-bottom: 15px;
 }
 
-.user{
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    padding: 10px 20px;
+.user {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
 }
 
-.image-container{
-    width: 12%;
-    border-radius: 5px;
-    object-fit: contain;
-    border: 2px solid black;
+.image-container {
+  width: 12%;
+  border-radius: 5px;
+  object-fit: contain;
+  border: 2px solid black;
 }
 
-img{
-    width: 405px;
-    border-radius: 5px;
+img {
+  width: 400px;
+  border-radius: 5px;
 }
 
-.user-details{
-    width: 68%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid black;
-    height: 155px;
-    padding: 0 20px;
+.user-details {
+  width: 68%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  height: 155px;
+  padding: 0 20px;
 }
 
-.user-details h2{
-    font-size: 2rem;
-    font-weight: 700;
+.user-details h2 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.user-details p{
-    margin-top: 100px;
-    font-size: 18px;
-    font-weight: normal;
+.show-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.show-container{
-    display: flex;
-    flex-direction: column;
+.single-user .single-user-info {
+  width: 79.5%;
+  border: 2px solid black;
+  padding: 5px 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.single-user .single-user-info{
-    width: 79.5%;
-    border: 2px solid black;
-    padding: 5px 5px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+.single-user .user-info {
+  align-self: center;
+  margin-left: 67px;
+  margin-bottom: 10px;
 }
 
-.single-user .user-info{
-    align-self: center;
-    margin-left: 67px;
-    margin-bottom: 10px;
+.recent {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.recent{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
- h3{
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+p {
+  font-size: 15.5px;
 }
 
- p{
-    font-size: 15.5px;
+.user-details p {
+  margin-top: 100px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.counters{
-    align-self: flex-end;
+.counters {
+  align-self: flex-end;
 }
 
-.counters span{
-    font-size: 13px;
+.counters span {
+  font-size: 13px;
 }
 
-.all-post-btn{
-    width: 100px;
-    padding: 5px 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border: 2px solid black;
-    align-self: center;
-    margin-top: 10px;
+.all-post-btn {
+  width: 100px;
+  padding: 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+  border: 2px solid black;
+  align-self: center;
+  margin-top: 10px;
 }
 
-.single-user-posts, .comment-sect{
-    width: 85.5%;
-    border: 2px solid black;
-    padding: 5px 5px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
+.single-user-posts,
+.comment-sect {
+  width: 85.5%;
+  border: 2px solid black;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.single-user-posts{
-    align-self: center;
+.single-user-posts {
+  align-self: center;
 }
 
-.post-container{
-    display: flex;
-    flex-direction: column;
+.post-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.comment li{
-    font-size: 17px;
+.comment li {
+  font-size: 17px;
 }
 
-.comment li .username{
-    font-weight: bold;
+.comment li .username {
+  font-weight: bold;
 }
 
-.post-container .pagination{
-    width: 100px;
-    align-self: center;
-    margin-bottom: 10px;
-    border: 2px solid black;
-    padding: 5px 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+.post-container .pagination {
+  width: 100px;
+  align-self: center;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
 
-.post{
-    display: flex;
-    flex-direction: column;
+.post {
+  display: flex;
+  flex-direction: column;
 }
 
-.single-post{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    border: 2px solid black;
-    padding: 10px;
+.single-post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 10px;
 }
 
-.single-post .post-header{
-    display: flex;
-    justify-content: space-between;
+.single-post .post-header {
+  display: flex;
+  justify-content: space-between;
 }
 
-.post-counts{
-    margin-top: 0;
-    align-self: flex-end;
-    margin-bottom: 10px;
+.post-counts {
+  margin-top: 0;
+  align-self: flex-end;
+  margin-bottom: 10px;
 }
 
-.post-comment{
-    width: 98.5%;
-    margin-left: 0;
+.post-comment {
+  width: 98.5%;
+  margin-left: 0;
 }
