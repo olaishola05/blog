@@ -10,7 +10,7 @@
         <p><%= @post.text%>...</p>
 
     </div>
-        <div class='comment-sect post-comment'></div>
+        <div class='comment-sect post-comment'>
             <% @post.comments.each do |comment|%>
                 <%= render comment %>
             <% end %>
