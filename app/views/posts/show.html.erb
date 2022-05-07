@@ -10,10 +10,12 @@
         <p><%= @post.text%>...</p>
 
     </div>
+    <% unless @post.comments.empty? %>
         <div class='comment-sect post-comment'>
             <% @post.comments.each do |comment|%>
                 <%= render comment %>
             <% end %>
         </div>
+    <% end %>
 
 </div>
