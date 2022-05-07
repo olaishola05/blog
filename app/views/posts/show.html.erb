@@ -3,7 +3,7 @@
         <div class='post-header'>
             <h3>Post #<%= @post.id %> by <%= @post.user.name %></h3>
             <div class='counters post-counts'>
-                <span>Comments: <%= @post.comments_counter ||= 'No comments yet' %></span>,
+                <span>Comments: <%= @post.comments_counter ||= 0 %></span>,
                 <span>Likes: <%= @post.likes_counter ||= 0 %></span>
             </div>
         </div>
@@ -11,7 +11,7 @@
 
     </div>
         <div class='comment-sect post-comment'>
-            <% @post.comments.each do |comment|%>
+            <% @post.recent_comments(@post.id).each do |comment|%>
                 <%= render comment %>
             <% end %>
         </div>
