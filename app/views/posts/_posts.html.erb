@@ -7,11 +7,14 @@
             <span>Likes: <%= post.likes_counter ||= 0 %></span>
         </div>
     </div>
-    <div class='comment-sect'>
-        <% post.recent_comments(post.id).each do |comment|%>
-            <%= render comment %>
-        <% end %>
-    </div>
+
+    <% unless post.recent_comments(post.id).empty? %>
+        <div class='comment-sect'>
+            <% post.recent_comments(post.id).each do |comment|%>
+                <%= render comment %>
+            <% end %>
+        </div>
+    <% end %>
 
 </div>
 

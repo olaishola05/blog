@@ -4,7 +4,10 @@
 </div>
   <div class='user-details'>
     <h2><%= user.name %></h2>
-    <p>Number of posts: <%= user.posts.count %></p>
+    <div class='userform'>
+      <p>Number of posts: <%= user.posts.count %></p>
+      <%= link_to 'Add Post', new_user_post_path(user.id), class: 'add-form' %>
+    </div>
   </div>
 </div>
 
