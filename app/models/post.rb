@@ -10,8 +10,7 @@ class Post < ApplicationRecord
     user.update(posts_counter: post_counter + 1)
   end
 
-  def recent_comments
-    post = Post.find(post_id)
-    post.comments.order(created_at: :desc).limit(5)
+  def recent_comments(post_id)
+    Comment.where(post_id: post_id).order(created_at: :desc).first(5)
   end
 end

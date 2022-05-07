@@ -3,8 +3,8 @@
         <div class='post-header'>
             <h3>Post #<%= @post.id %> by <%= @post.user.name %></h3>
             <div class='counters post-counts'>
-                <span>Comments: <%= @post.comments.size ||= 'No comments yet' %></span>,
-                <span>Likes: <%= @post.likes.size ||= 0 %></span>
+                <span>Comments: <%= @post.comments.size ||= 0 %></span>,
+                <span>Likes: <%= @post.likes_counter ||= 0 %></span>
             </div>
         </div>
         <p><%= @post.text%>...</p>
