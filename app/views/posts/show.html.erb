@@ -1,4 +1,10 @@
 <div class='post'>
+    <% flash.each do |name,value|%>
+  <div class = '<%=name %> flash'>
+    <%= value %>
+  </div>
+<%end%>
+
     <div class='single-post'>
         <div class='post-header'>
             <h3>Post #<%= @post.id %> by <%= @post.user.name %></h3>

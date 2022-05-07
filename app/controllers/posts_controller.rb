@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.includes(:user).where(user_id: params[:user_id])
     @user = User.find(params[:user_id])
-    @posts = @user.posts
   end
 
   def new
@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    # @post = current_user.posts.new(post_params)
     @post = Post.new(
       title: post_params[:title],
       text: post_params[:text],
