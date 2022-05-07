@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET #index' do
-    before(:example) { get user_posts_path(1) } # get(:index)
+    before(:example) { get "/users/4/posts" } # get(:index)
 
     it 'return response status 200 or ok' do
-      expect(response).to have_http_status(:success)
+      # expect(response).to have_http_status(:success)
       expect(response.status).to eq(200)
       expect(response).to have_http_status(:ok)
     end
 
     it 'return response body text' do
-      expect(response.body).to include('Posts Homepage')
+      expect(response.body).to include('Number of posts')
     end
 
     it 'should render template index' do
@@ -20,14 +20,14 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET #show' do
-    before(:example) { get user_post_path(1, 1) }
+    before(:example) { get "/users/4/posts/1" }
 
     it 'return response status 200 or ok' do
       expect(response).to have_http_status(:success)
     end
 
     it 'return response body text' do
-      expect(response.body).to include('Show a single post')
+      expect(response.body).to include('Add comment to post')
     end
 
     it 'should render template show' do
