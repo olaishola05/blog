@@ -15,19 +15,19 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'Should return response body text' do
-      expect(response.body).to include('Users! Homepage')
+      expect(response.body).to include('Number of posts')
     end
   end
 
   describe 'GET #show' do
-    before(:example) { get user_path(1) } # get(:show, params: { id: 1 })
+    before(:example) { get user_path(4) } # get(:show, params: { id: 1 })
 
     it 'return response status 200 or ok' do
       expect(response).to have_http_status(:success)
     end
 
     it 'Should return response body text' do
-      expect(response.body).to include('A user homepage')
+      expect(response.body).to include('Number of posts')
     end
 
     it 'Should render template show' do

@@ -1,4 +1,9 @@
 <div class='post-container'>
+    <% flash.each do |name,value|%>
+  <div class = '<%=name %> flash'>
+    <%= value %>
+  </div>
+<%end%>
     <%= render @user %>
         <% @posts.each_with_index do |post, index| %>
          <%= render 'posts', post: post, index: index %>

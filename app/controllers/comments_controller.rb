@@ -13,9 +13,10 @@ class CommentsController < ApplicationController
     )
 
     if @comment.save
-      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id), success: 'Successfully add a comment'
     else
-      render :new, alert: 'An error has occurred while creating the comment'
+      flash.now[:error] = 'Comment was not added'
+      render :new
     end
   end
 

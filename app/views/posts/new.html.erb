@@ -1,7 +1,14 @@
 <div class='forms-container'>
+  <% flash.each do |name,value|%>
+  <div class = '<%=name %> flash'>
+    <%= value %>
+  </div>
+<%end%>
+
   <h1 class="form-title">Add new Post</h1>
+
 <section>
-    <%= form_with model: @post, url: user_posts_path, class: "form" do |form| %>
+    <%= form_with model: @post, url: user_posts_path, scope: :post, class: "form" do |form| %>
         <% form.label :title %>
         <%= form.text_field :title, placeholder: 'Enter Post title' %>
         <% form.label :text %>

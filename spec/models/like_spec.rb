@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { Like.new(post_id: 1, user_id: 148) }
+  before { subject.save }
+
+  it 'Test  like_count method ' do
+    like = subject.like_count(subject.post_id)
+    expect(like).to be_truthy
+  end
 end
