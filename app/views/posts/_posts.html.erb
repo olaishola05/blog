@@ -1,0 +1,17 @@
+<div class='single-user'>
+    <div class='single-user-posts'>
+        <h3>Post #<%= index + 1 %></h3>
+        <p><%= post.text%>...</p>
+        <div class='counters'>
+            <span>Comments: <%= post.comments.size ||= 0 %></span>,
+            <span>Likes: <%= post.likes_counter ||= 0 %></span>
+        </div>
+    </div>
+    <div class='comment-sect'>
+        <% post.recent_comments(post.id).each do |comment|%>
+            <%= render comment %>
+        <% end %>
+    </div>
+
+</div>
+

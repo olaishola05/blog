@@ -1,0 +1,7 @@
+<div class='single-user-info'>
+    <h3>Post #<%= index + 1 %></h3>
+    <p><%= post.text%>...</p>
+    <div class='counters'>
+    <span>Comments: <%= post.comments_counter ||= 0 %></span>,
+    <span>Likes: <%= post.likes_counter ||= 0 %></div></span>
+</div>

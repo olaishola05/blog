@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :likes
 
   def recent_posts
-    Post.order(created_at: :desc).limit(3)
+    user = User.find(id)
+    user.posts.order(created_at: :desc).limit(3)
   end
 end

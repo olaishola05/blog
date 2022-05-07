@@ -1,1 +1,7 @@
-<h1>Users! Homepage</h1>
+<div class="users-container">
+    <% @users.each do |user| %>
+    <div class='user-container'>
+        <%= render user %>
+    </div>
+    <% end %>
+</div>
