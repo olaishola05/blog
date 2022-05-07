@@ -9,7 +9,11 @@
         </div>
         <p><%= @post.text%>...</p>
 
+    <%= form_with model: @like, url: "/users/#{@user.id}/posts/#{@post.id}/likes", scope: :like  do |form| %>
+        <%= form.submit 'Like post', class: 'likeBtn' %>
+    <%end%>
     </div>
+
     <% unless @post.comments.empty? %>
         <div class='comment-sect post-comment'>
             <% @post.comments.each do |comment|%>
@@ -17,5 +21,5 @@
             <% end %>
         </div>
     <% end %>
-
+    <%= render '/comments/new' %>
 </div>

@@ -184,20 +184,20 @@ p {
   margin-left: 0;
 }
 
-.forms-container{
-  width: 100%;
+.forms-container {
+  width: 95%;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 }
 
-.forms-container h1{
+.forms-container h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.form{
+.form {
   width: 85%;
   padding: 20px;
   display: flex;
@@ -205,7 +205,8 @@ p {
   margin: 0 auto;
 }
 
-.form input[type="text"], textarea{
+.form input[type="text"],
+textarea {
   width: 80%;
   padding: 8px;
   border: none;
@@ -213,7 +214,7 @@ p {
   align-self: center;
 }
 
-.form input[type='submit']{
+.form input[type='submit'] {
   width: 150px;
   align-self: center;
   padding: 8px;
@@ -223,3 +224,19 @@ p {
   border-radius: 5px;
 }
 
+.likeBtn {
+  margin-top: 10px;
+}
+
+.userform {
+  display: flex;
+  gap: 10px;
+}
+
+.add-form {
+  align-self: flex-end;
+  color: blue;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
