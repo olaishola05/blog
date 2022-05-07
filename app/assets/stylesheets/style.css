@@ -112,6 +112,10 @@ p {
   border: 2px solid black;
   align-self: center;
   margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  color: black;
 }
 
 .single-user-posts,

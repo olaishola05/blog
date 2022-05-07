@@ -10,5 +10,6 @@
             <%= render post, index: index %>
         <% end %>
     </div>
-    <button type='button' class='all-post-btn'>See all posts</button>
+
+    <%= link_to 'See all Posts', user_posts_path(@user), class: 'all-post-btn' %>
 </div>

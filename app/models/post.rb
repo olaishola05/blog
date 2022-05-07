@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+
   belongs_to :user
   has_many :comments
   has_many :likes
@@ -11,7 +12,8 @@ class Post < ApplicationRecord
   end
 
   def recent_comments
-    post = Post.find(post_id)
+    post = Post.find(params[:post_id])
     post.comments.order(created_at: :desc).limit(5)
   end
+
 end
