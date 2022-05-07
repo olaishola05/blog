@@ -183,3 +183,42 @@ p {
   width: 98.5%;
   margin-left: 0;
 }
+
+.forms-container{
+  width: 100%;
+  padding: 20px;
+}
+
+.forms-container h1{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form{
+  width: 85%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form input[type="text"], textarea{
+  width: 80%;
+  padding: 8px;
+  border: none;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.form input[type='submit']{
+  width: 150px;
+  align-self: center;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
