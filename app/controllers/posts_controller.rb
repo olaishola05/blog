@@ -9,8 +9,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    # @post = current_user.posts.new(post_params)
+    @post = Post.new(
+      title: post_params[:title],
+      text: post_params[:text],
+      comments_counter: 0,
+      likes_counter: 0,
+      user_id: params[:user_id]
+    )
     if @post.save
+      @post.update_counter(current_user.id)
       redirect_to user_posts_path(current_user)
     else
       render :new, alert: 'An error has occurred while creating the post'

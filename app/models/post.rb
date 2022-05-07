@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  def update_counter
+  def update_counter(user_id)
     user = User.find(user_id)
     post_counter = user.posts_counter
     post_counter ||= 0

@@ -14,8 +14,8 @@ RSpec.describe User, type: :model do
     expect(subject).to be_invalid
   end
 
-  it 'Test three_recent_post method ' do
-    posts = subject.recent_posts(subject.id)
+  it 'Test recent_post method ' do
+    posts = subject.recent_posts
     expect(posts.length).to eq(0)
   end
 end

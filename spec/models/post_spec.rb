@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
     Post.new(title: 'Real stressed', text: 'Price i have to pay working late', comments_counter: 4, likes_counter: 9,
-             user_id: 148)
+             user_id: 4)
   end
   before { subject.save }
 
@@ -28,7 +28,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Test update_counter method ' do
-    posts = subject.update_counter
+    posts = subject.update_counter(subject.user_id)
     expect(posts).to be_truthy
   end
 
