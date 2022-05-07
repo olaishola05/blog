@@ -12,8 +12,6 @@ class Post < ApplicationRecord
   end
 
   def recent_comments(post_id)
-    # post = Post.find(params[:post_id])
-    # post.comments.order(created_at: :desc).limit(5)
     Comment.where(post_id: post_id).order(created_at: :desc).first(5)
   end
 
