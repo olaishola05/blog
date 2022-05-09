@@ -13,7 +13,7 @@
   <body>
   <div class="login">
     <% if user_signed_in? %>
-      <strong><%= current_user.name %></strong>
+      <strong><%= link_to current_user.name, user_posts_path(current_user.id) %></strong>
       <strong><%= current_user.email %></strong>
       <%= link_to 'All users', root_path %>
       <%= link_to 'Edit profile', edit_user_registration_path %>
