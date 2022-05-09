@@ -12,6 +12,9 @@
 
   <body>
    <div class='app-container'>
+    <% if notice %>
+      <%= render 'layouts/flash' %>
+    <% end %>
     <%= yield %>
    </div>
   </body>
