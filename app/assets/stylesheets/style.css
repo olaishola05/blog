@@ -311,7 +311,7 @@ textarea {
   margin: 0 auto;
 }
 
-.form-submit .field{
+.form-submit, .field{
   display: flex;
   flex-direction: column;
 }
@@ -356,4 +356,47 @@ textarea {
 
 .link-to-login a{
   color: dodgerblue;
+}
+
+.login-container{
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.login-container p{
+  align-self: flex-end;
+}
+
+.login-container p a{
+  width: 200px;
+  padding: 8px 10px;
+  background-color: #f2f6fc;
+  border: 1px solid #f2f6fc;
+  color: black;
+  border-radius: 4px;
+}
+
+.login-container h2{
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.login-container .login-form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.login-form input[type='text'], [type='email'], [type='password']{
+  width: 80%;
+  margin-bottom: 3px;
 }
