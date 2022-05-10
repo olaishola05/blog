@@ -250,8 +250,7 @@ textarea {
 }
 
 .signup-main-container{
-  width: 90%;
-  /* height: 550px; */
+  width: 85%;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -317,7 +316,7 @@ textarea {
   flex-direction: column;
 }
 
-.form-submit label{
+ label{
   margin: 5px 0;
   font-size: 13px;
   font-weight: 500;
@@ -356,8 +355,10 @@ textarea {
   text-align: center;
 }
 
-.link-to-login a{
+ a{
   color: dodgerblue;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .login-container{
@@ -401,4 +402,32 @@ textarea {
 .login-form input[type='text'], [type='email'], [type='password']{
   width: 80%;
   margin-bottom: 3px;
+}
+
+.comfirmation{
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comfirmation h2{
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.comfirmation form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.comfirmation form .confirm-btn{
+  width: 250px;
+  margin-bottom: 20px;
 }
