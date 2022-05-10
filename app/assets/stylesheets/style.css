@@ -251,6 +251,7 @@ textarea {
 
 .signup-main-container{
   width: 90%;
+  /* height: 550px; */
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -318,17 +319,18 @@ textarea {
 
 .form-submit label{
   margin: 5px 0;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 }
 
-.form-submit input[type='text'], [type='email'], [type='password']{
+.form-submit input[type='text'], input[type='email'], input[type='password']{
+  width: 93%;
   padding: 8px;
   font-size: 14px;
 }
 
 .form-submit textarea{
-  width: 96%;
+  width: 94%;
   border: 0.5px solid grey;
   height: 40px;
 }
