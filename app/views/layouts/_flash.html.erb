@@ -1,9 +1,7 @@
 <% unless flash.empty? %>
   <div id='notice'>
-  <% flash.each do |name, message| %>
-    <div class="flash-<%= name %>">
-      <%= message %>
-    </div>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, id: "flash_#{name}" %>
   <% end %>
 </div>
 <% end %>
