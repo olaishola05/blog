@@ -22,7 +22,7 @@
 
     <% unless @post.comments.empty? %>
         <div class='comment-sect post-comment'>
-            <% @post.comments.each do |comment|%>
+            <% @post.comments.includes(:user).each do |comment|%>
                 <%= render comment %>
             <% end %>
         </div>

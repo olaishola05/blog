@@ -12,5 +12,6 @@
  *
  *= require_self
  *= require 'resets'
+ *= require 'nav'
  *= require 'style'
  */

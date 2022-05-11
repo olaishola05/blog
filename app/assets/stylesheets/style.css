@@ -3,9 +3,8 @@ body {
 }
 
 .app-container {
-  width: 70%;
+  width: 80%;
   padding: 30px;
-  display: flex;
   margin: 0 auto;
 }
 
@@ -47,9 +46,16 @@ img {
   padding: 0 20px;
 }
 
-.user-details h2 {
+a {
+  color: dodgerblue;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.user-details h2 a {
   font-size: 2rem;
   font-weight: 700;
+  color: black;
 }
 
 .show-container {
@@ -131,6 +137,15 @@ p {
 
 .single-user-posts {
   align-self: center;
+}
+
+.single-user-posts #link-to-post {
+  margin-bottom: 10px;
+}
+
+.post-link {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .post-container {
@@ -246,4 +261,225 @@ textarea {
   text-align: center;
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+.flash-success,
+.flash-error,
+.flash-info {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.signup-main-container {
+  width: 85%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.login-container p {
+  align-self: flex-end;
+}
+
+.login-container p a {
+  width: 200px;
+  padding: 8px 10px;
+  background-color: #f2f6fc;
+  border: 1px solid #f2f6fc;
+  color: black;
+  border-radius: 4px;
+}
+
+.signup-top-container,
+.signup-image {
+  flex: 1;
+  padding: 10px;
+}
+
+.signup-image {
+  text-align: center;
+  padding-top: 100px;
+  overflow: hidden;
+  background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("https://images.pexels.com/photos/6830877/pexels-photo-6830877.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signup-image img {
+  width: 100%;
+  object-fit: fill;
+  height: 500px;
+  position: relative;
+}
+
+.signup-image .overlay {
+  position: absolute;
+  top: 280px;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+}
+
+.signup-image .overlay p {
+  margin-top: 50px;
+}
+
+.signup-image .overlay p a {
+  color: black;
+}
+
+.signup-top-container h2 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.form-submit {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.form-submit,
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 5px 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.form-submit input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 93%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.form-submit textarea {
+  width: 94%;
+  border: 0.5px solid grey;
+  height: 40px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  width: 150px;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+.link-to-login {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.login-container h2 {
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.login-container .login-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.login-form input[type='text'],
+[type='email'],
+[type='password'] {
+  width: 80%;
+  margin-bottom: 3px;
+}
+
+.comfirmation,
+.forgot-pass {
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comfirmation h2 {
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.comfirmation form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.confirm-btn,
+.forgot-btn {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.forgot-pass h2 {
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.forgot-pass form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* Alert msg */
+.flash-success {
+  color: green;
+}
+
+.flash-error {
+  color: red;
+}
+
+.flash-info {
+  color: gray;
 }
