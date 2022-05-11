@@ -73,6 +73,12 @@ $ cd blog
 - Twitter: [@Orlaish](https://twitter.com/Orlaish)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ola-ishola/)
 
+👤 **Meqdam Al-qudah**
+
+- [GitHub](https://github.com/MeqdamAlqudah)
+- [Twitter](https://twitter.com/MeqdamQudah)
+- [LinkedIn](www.linkedin.com/in/meqdam-al-qudah-7514a21b5)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
