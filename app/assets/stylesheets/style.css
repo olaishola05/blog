@@ -404,7 +404,7 @@ textarea {
   margin-bottom: 3px;
 }
 
-.comfirmation{
+.comfirmation, .forgot-pass{
   width: 60%;
   padding: 10px;
   margin: 0 auto;
@@ -420,14 +420,29 @@ textarea {
 }
 
 .comfirmation form{
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   padding: 10px;
   margin: 0 auto;
 }
 
-.comfirmation form .confirm-btn{
+.confirm-btn, .forgot-btn{
   width: 250px;
   margin-bottom: 20px;
+}
+
+.forgot-pass h2{
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.forgot-pass form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
 }
