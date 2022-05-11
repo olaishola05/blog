@@ -134,6 +134,15 @@ p {
   align-self: center;
 }
 
+.single-user-posts #link-to-post{
+  margin-bottom: 10px;
+}
+
+.post-link{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 .post-container {
   display: flex;
   flex-direction: column;
@@ -242,8 +251,14 @@ textarea {
   font-size: 15px;
 }
 
-.flash {
+.flash{
   color: green;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.flash-success, .flash-error, .flash-info {
   text-align: center;
   font-size: 14px;
   margin-bottom: 10px;
@@ -448,13 +463,14 @@ textarea {
 }
 
 /* Alert msg */
-.alert-success {
+.flash-success {
   color: green;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
-.alert-danger {
+.flash-error {
   color: red;
-  text-align: center;
+}
+
+.flash-info{
+  color: gray;
 }

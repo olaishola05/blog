@@ -1,7 +1,7 @@
 <% unless flash.empty? %>
   <div id='notice'>
   <% flash.each do |name, message| %>
-    <div class="flash <%= name %>">
+    <div class="flash-<%= name %>">
       <%= message %>
     </div>
   <% end %>

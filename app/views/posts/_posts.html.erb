@@ -1,6 +1,7 @@
 <div class='single-user'>
     <div class='single-user-posts'>
         <h3>Post #<%= index + 1 %></h3>
+        <p id='link-to-post'><%= link_to post.title, user_post_path(post.user.id, post.id), class: 'post-link' %></p>
         <p><%= post.text%>...</p>
         <div class='counters'>
             <span>Comments: <%= post.comments.size ||= 0 %></span>,
