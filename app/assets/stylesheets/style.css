@@ -5,8 +5,8 @@ body {
 .app-container {
   width: 80%;
   padding: 30px;
-  display: flex;
   margin: 0 auto;
+
 }
 
 .users-container {
@@ -445,4 +445,16 @@ textarea {
   flex-direction: column;
   padding: 10px;
   margin: 0 auto;
+}
+
+/* Alert msg */
+.alert-success {
+  color: green;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+  color: red;
+  text-align: center;
 }
