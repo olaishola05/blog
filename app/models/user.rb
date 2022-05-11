@@ -14,4 +14,11 @@ class User < ApplicationRecord
     user = User.find(id)
     user.posts.order(created_at: :desc).limit(3)
   end
+
+  Roles = [ :admin , :default, :moderator, :manager ]
+
+  def is?( requested_role )
+    self.role == requested_role.to_s
+  end
+
 end

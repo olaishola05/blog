@@ -5,12 +5,12 @@ class Ability
 
   def initialize(user)
       user ||= User.new # guest user (not logged in)
-      admin_privilege if user.admin?
+      admin_privilege if user.is? :admin
       else
         can :read, Post
-        user_privilege if user.present?
-        manager_privilege if user.manager?
-        moderator_privilege if user.moderator?
+        user_privilege if user.is? :default
+        manager_privilege if user.is? :manager
+        moderator_privilege if user.is? :moderator
       end
   end
 
