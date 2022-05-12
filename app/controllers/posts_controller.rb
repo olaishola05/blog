@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authenticate_user!
+  load_and_authorize_resource param_method: :post_params
 
   def index
     @posts = Post.where(user_id: params[:user_id])
@@ -20,9 +21,10 @@ class PostsController < ApplicationController
     )
     if @post.save
       @post.update_counter(current_user.id)
-      redirect_to user_posts_path(current_user), success: 'Successfully created a post'
+      redirect_to user_posts_path(current_user), notice: 'Successfully created a post'
     else
-      flash.now[:error] = 'Post was not created'
+      # flash.now[:error] = 'Post was not created'
+      flash[:notice] = @post.errors.first.full_message.to_s
       render :new
     end
   end
@@ -30,6 +32,17 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = @user.posts.includes(:comments, :likes).find(params[:id])
+  end
+
+  def destroy
+    if @post.destroy
+      @post.update_counter(current_user)
+      flash[:notice] = 'Post deleted successfully'
+      redirect_to user_posts_path(params[:user_id])
+    else
+      flash[:notice] = 'Post was not deleted'
+      redirect_to user_post_path(params[:user_id], @post)
+    end
   end
 
   private

@@ -6,6 +6,7 @@ class Ability
   def initialize(user)
       user ||= User.new # guest user (not logged in)
       can :read, Post
+      can :read, Comment
       admin_privilege if user.is? :admin
       user_privilege(user) if user.is? :default
       manager_privilege if user.is? :manager
@@ -26,7 +27,7 @@ class Ability
   end
 
   def moderator_privilege
-    can :delete, [Post, Comment, Like]
+    can :delete, [Post, Comment]
   end
 
   def admin_privilege
