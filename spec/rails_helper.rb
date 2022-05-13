@@ -1,5 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'4
+require 'spec_helper'
 require "capybara/rspec"
 
 ENV['RAILS_ENV'] ||= 'test'
