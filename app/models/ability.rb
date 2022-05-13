@@ -1,16 +1,14 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-      user ||= User.new # guest user (not logged in)
-      can :read, Post
-      can :read, Comment
-      admin_privilege if user.is? :admin
-      user_privilege(user) if user.is? :default
-      manager_privilege if user.is? :manager
-      moderator_privilege if user.is? :moderator
+    user ||= User.new # guest user (not logged in)
+    can :read, Post
+    can :read, Comment
+    admin_privilege if user.is? :admin
+    user_privilege(user) if user.is? :default
+    manager_privilege if user.is? :manager
+    moderator_privilege if user.is? :moderator
   end
 
   private
@@ -31,6 +29,7 @@ class Ability
   end
 
   def admin_privilege
-    can :manage, all
+    can :destroy, Post
+    can :destroy, Comment
   end
 end

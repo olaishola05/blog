@@ -15,9 +15,9 @@ class User < ApplicationRecord
     user.posts.order(created_at: :desc).limit(3)
   end
 
-  Roles = [ :admin , :default, :moderator, :manager ]
+  ROLES = %i[admin default moderator manager].freeze
 
-  def is?( requested_role )
-    self.role == requested_role.to_s
+  def is?(requested_role)
+    role == requested_role.to_s
   end
 end

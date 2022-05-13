@@ -1,7 +1,9 @@
 <div class="users-container">
     <% @users.each do |user| %>
     <div class='user-container'>
-        <%= render user %>
+        <% unless user.role == 'admin' %>
+            <%= render user %>
+        <% end %>
     </div>
     <% end %>
 </div>
