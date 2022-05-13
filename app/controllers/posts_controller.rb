@@ -33,16 +33,7 @@ class PostsController < ApplicationController
     @post = @user.posts.includes(:comments, :likes).find(params[:id])
   end
 
-  def destroy
-    if @post.destroy
-      @post.update_counter
-      flash[:notice] = 'Post deleted successfully'
-      redirect_to user_posts_path(params[:user_id])
-    else
-      flash[:notice] = 'Post was not deleted'
-      redirect_to user_posts_path(params[:user_id], @post)
-    end
-  end
+
 
   private
 
