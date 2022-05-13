@@ -1,10 +1,3 @@
-<div class='post'>
-    <% flash.each do |name,value|%>
-  <div class = '<%=name %> flash'>
-    <%= value %>
-  </div>
-<%end%>
-
     <div class='single-post'>
         <div class='post-header'>
             <h3>Post #<%= @post.id %> by <%= @post.user.name %></h3>
@@ -13,11 +6,19 @@
                 <span>Likes: <%= @post.likes_counter ||= 0 %></span>
             </div>
         </div>
-        <p><%= @post.text%>...</p>
+        <p><%= @post.text%>...more</p>
 
     <%= form_with model: @like, url: "/users/#{@user.id}/posts/#{@post.id}/likes", scope: :like  do |form| %>
         <%= form.submit 'Like post', class: 'likeBtn' %>
     <%end%>
+
+    <% if can? :destroy, @post %>
+    <%= button_to 'Delete',
+      "/users/#{params[:user_id]}/posts/#{@post.id}",
+      class: "danger",
+      method: :delete
+    %>
+  <% end %>
     </div>
 
     <% unless @post.comments.empty? %>

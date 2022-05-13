@@ -3,6 +3,15 @@
         <h3>Post #<%= index + 1 %></h3>
         <p id='link-to-post'><%= link_to post.title, user_post_path(post.user.id, post.id), class: 'post-link' %></p>
         <p><%= post.text%>...</p>
+
+        <% if can? :destroy, post %>
+            <%= button_to 'Delete',
+            "/users/#{params[:user_id]}/posts/#{post.id}",
+            class: "dandger",
+            method: :delete
+            %>
+        <% end %>
+
         <div class='counters'>
             <span>Comments: <%= post.comments.size ||= 0 %></span>,
             <span>Likes: <%= post.likes_counter ||= 0 %></span>

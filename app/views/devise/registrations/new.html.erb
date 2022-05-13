@@ -21,6 +21,7 @@
       <%= f.text_area :bio, autocomplete: "bio", placeholder: 'Short intro of yourself' %>
     </div>
     <%= f.hidden_field :posts_counter, value: 0 %>
+    <%= f.hidden_field :role, value: 'default' %>
     <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>

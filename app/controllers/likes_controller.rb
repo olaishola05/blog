@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @like = Like.new
   end
@@ -11,10 +13,9 @@ class LikesController < ApplicationController
     if @like.save
       @post = Post.find(params[:post_id])
       @like.like_count(@post.id)
-      redirect_to user_post_path(user_id: @post.user_id, id: @post.id), success: 'Successfully liked a post'
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id), notice: 'Successfully liked a post'
     else
-      redirect_to user_post_path(user_id: @post.user_id, id: @post.id),
-                  flash.now[:error] = 'An error occurr while trying to like this post'
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id), notice: @like.errors.first.full_message.to_s
     end
   end
 end

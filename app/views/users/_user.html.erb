@@ -6,7 +6,9 @@
     <h2><%= link_to user.name, user_posts_path(user.id) %></h2>
     <div class='userform'>
       <p>Number of posts: <%= user.posts.count %></p>
-      <%= link_to 'Add Post', new_user_post_path(user.id), class: 'add-form' %>
+      <% if can? :create, user.posts.new %>
+        <%= link_to 'Add Post', new_user_post_path(user.id), class: 'add-form' %>
+      <% end %>
     </div>
   </div>
 </div>

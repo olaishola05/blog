@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource param_method: :comment_params
+
   def new
     @comment = Comment.new
   end
@@ -18,6 +20,15 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Comment was not added'
       render :new
     end
+  end
+
+  def destroy
+    flash[:notice] = if @comment.destroy
+                       'Comment deleted successfully'
+                     else
+                       'Comment was not deleted successfully'
+                     end
+    redirect_to user_post_path(params[:user_id], params[:post_id])
   end
 
   private
