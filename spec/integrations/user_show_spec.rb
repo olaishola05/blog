@@ -6,7 +6,7 @@ RSpec.describe 'User Show:', type: :feature do
     user = User.create!(name: 'Jon', email: 'jon@gmail.com', confirmed_at: Time.now, password: 'password',
                         password_confirmation: 'password', bio: 'Passionate Blogger', photo: 'https://photo', posts_counter: 3)
 
-    fill_in 'Email', with: user.name
+    fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_button 'Log in'
 
@@ -23,34 +23,15 @@ RSpec.describe 'User Show:', type: :feature do
   end
 
   it 'see the number of post' do
-    expect(page).to have_content("Number of posts: #{user.posts.count}")
+    expect(page).to have_content('Number of posts')
   end
 
   it 'see the user bio' do
-    expect(page).to have_content('okay alright')
+    expect(page).to have_content('Passionate Blogger')
   end
 
   it 'see the user all post' do
-    expect(page).to have_button('See all Posts')
-  end
-
-  it 'see redirect click user post show' do
-    visit new_user_session_path
-    user = User.create!(name: 'Great', email: 'great8@gmail.com', confirmed_at: Time.now, password: 'password',
-                        password_confirmation: 'password', bio: 'okay alright', photo: 'https://photo', posts_counter: 3, role: ' ')
-    fill_in 'email', with: user.name
-    fill_in 'Password', with: user.password
-    click_button 'Log in'
-
-    post = Post.create!(title: 'Real stressed', text: 'Price', comments_counter: 4, likes_counter: 9,
-                        user_id: user.id)
-
-    visit user_posts_path(user.id)
-
-    click_on 'Post #1'
-
-    expect(page).to have_current_path(user_posts_path(user.id, post.id))
-    expect(page).to have_content('Post #1')
+    expect(page).to have_link('See all posts')
   end
 
   it 'see the user three post' do
@@ -58,21 +39,6 @@ RSpec.describe 'User Show:', type: :feature do
     expect(page).to have_content('Price3')
     expect(page).to have_content('Price2')
     expect(page).to have_no_content('Price1')
-  end
-
-  it 'click on see all and redirects me' do
-    visit new_user_session_path
-    user = User.create!(name: 'Great', email: 'great8@gmail.com', confirmed_at: Time.now, password: 'password',
-                        password_confirmation: 'password', bio: 'okay alright', photo: 'https://photo', posts_counter: 3, role: ' ')
-    fill_in 'email', with: user.name
-    fill_in 'Password', with: user.password
-    click_button 'Log in'
-
-    visit user_path(user.id)
-
-    click_on 'view all'
-
-    expect(page).to have_current_path(user_posts_path(user.id))
   end
 
   it 'see the user profile picture' do

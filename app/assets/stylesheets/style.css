@@ -476,7 +476,7 @@ input[type='password'] {
   color: green;
 }
 
-.flash-error {
+.alert {
   color: red;
 }
 
