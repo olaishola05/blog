@@ -9,4 +9,11 @@ Rails.application.routes.draw do
   end
 
   root  'users#index'
+
+  post "/api/register", to: 'authentications#register'
+  post '/api/login', to: 'authentications#login'
+  get '/api/users/:user_id/posts', to: 'posts#posts'
+  get '/api/posts/:id/comments', to: 'comments#comments'
+  post '/api/comments', to: 'comments#add_comment'
+
 end
