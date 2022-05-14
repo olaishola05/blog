@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   load_and_authorize_resource
+  skip_before_action :authenticate_request
 
   def new
     @like = Like.new
