@@ -27,10 +27,11 @@
 </div>
 <div>
    <div class='app-container'>
-    <% if notice %>
-      <%= render 'layouts/flash' %>
-    <% end %>
-
+    <%# <% if notice %>
+      <%# <%= render 'layouts/flash' %>
+    <%# <% end %>
+      <p class = 'notice' > <%= notice %> </p>
+      <p class = 'alert' ><%= alert %></p>
     <%= yield %>
    </div>
   </body>

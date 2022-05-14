@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource param_method: :post_params
 
   def index
-    @posts = Post.where(user_id: params[:user_id])
+    @posts = Post.includes(:user).where(user_id: params[:user_id])
     @user = User.find(params[:user_id])
   end
 
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.includes(:comments, :likes).find(params[:id])
+    @post = @user.posts.includes(:comments).find(params[:id])
   end
 
   def destroy
